@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ESS package &#8212; ESS doc 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=01931969" />
+    <script src="_static/documentation_options.js?v=8d563738"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ESS documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="ess-package">
+<h1>ESS package<a class="headerlink" href="#ess-package" title="Link to this heading">¶</a></h1>
+<section id="module-ESS_package.ESS">
+<span id="ess"></span><h2>ESS<a class="headerlink" href="#module-ESS_package.ESS" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ESS_package.ESS.</span></span><span class="sig-name descname"><span class="pre">ESS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_S_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SoE_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SoE_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SoE_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q_n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS.ESS" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Energy Storage System (ESS) model.</p>
+<p>Superclass that models a linear ESS, being the latter the simplest one to be extended.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.model" title="Link to this definition">¶</a></dt>
+<dd><p>Identifier or name of the ESS model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.Q">
+<span class="sig-name descname"><span class="pre">Q</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.Q" title="Link to this definition">¶</a></dt>
+<dd><p>Capacity in kWh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.p_S_max">
+<span class="sig-name descname"><span class="pre">p_S_max</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.p_S_max" title="Link to this definition">¶</a></dt>
+<dd><p>Maximum charging/discharging power in kW.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.a">
+<span class="sig-name descname"><span class="pre">a</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.a" title="Link to this definition">¶</a></dt>
+<dd><p>Empirical cost model parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.b">
+<span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.b" title="Link to this definition">¶</a></dt>
+<dd><p>Empirical cost model parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.B">
+<span class="sig-name descname"><span class="pre">B</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.B" title="Link to this definition">¶</a></dt>
+<dd><p>Empirical cost model parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.eta">
+<span class="sig-name descname"><span class="pre">eta</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.eta" title="Link to this definition">¶</a></dt>
+<dd><p>Efficiency.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.SoE_0">
+<span class="sig-name descname"><span class="pre">SoE_0</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.SoE_0" title="Link to this definition">¶</a></dt>
+<dd><p>Initial state of energy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.V_n">
+<span class="sig-name descname"><span class="pre">V_n</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.V_n" title="Link to this definition">¶</a></dt>
+<dd><p>Nominal voltage of the ESS in V, assumed constant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.SoE_min">
+<span class="sig-name descname"><span class="pre">SoE_min</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.SoE_min" title="Link to this definition">¶</a></dt>
+<dd><p>Minimum allowable state of energy, for a longer ESS life.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.SoE_max">
+<span class="sig-name descname"><span class="pre">SoE_max</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.SoE_max" title="Link to this definition">¶</a></dt>
+<dd><p>Maximum allowable state of energy, for a longer ESS life.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.Q_n">
+<span class="sig-name descname"><span class="pre">Q_n</span></span><a class="headerlink" href="#ESS_package.ESS.ESS.Q_n" title="Link to this definition">¶</a></dt>
+<dd><p>Nominal capacity in kWh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.get_wear_cost">
+<span class="sig-name descname"><span class="pre">get_wear_cost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SoE_prev</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_S_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS.ESS.get_wear_cost" title="Link to this definition">¶</a></dt>
+<dd><p>Estimates the battery wear cost, by implementing to an empirical cost model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_GL_S</strong> (<em>float</em>) – Power flow between Grid Load (GL) and Storage (S) in kW.</p></li>
+<li><p><strong>delta_t</strong> (<em>float</em>) – Simulation timestep in seconds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>C_b_k</strong> – Battery wear cost.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.update_SoE_ch">
+<span class="sig-name descname"><span class="pre">update_SoE_ch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p_GL_S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_GL</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS.ESS.update_SoE_ch" title="Link to this definition">¶</a></dt>
+<dd><p>Updates the state of energy during charging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_GL_S</strong> (<em>float</em>) – Power flow between Grid Load (GL) and Storage (S) in kW.</p></li>
+<li><p><strong>p_GL</strong> (<em>float</em>) – Power from the Grid Load (GL) in kW.</p></li>
+<li><p><strong>delta_t</strong> (<em>float</em>) – Simulation timestep in seconds.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS.ESS.update_SoE_dch">
+<span class="sig-name descname"><span class="pre">update_SoE_dch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p_GL_S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS.ESS.update_SoE_dch" title="Link to this definition">¶</a></dt>
+<dd><p>Updates the state of energy during charging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_GL_S</strong> (<em>float</em>) – Power flow between Grid Load (GL) and Storage (S) in kW.</p></li>
+<li><p><strong>p_GL</strong> (<em>float</em>) – Power from the Grid Load (GL) in kW.</p></li>
+<li><p><strong>delta_t</strong> (<em>float</em>) – Simulation timestep in seconds.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ESS_package.ESS_empirical">
+<span id="ess-empirical"></span><h2>ESS empirical<a class="headerlink" href="#module-ESS_package.ESS_empirical" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ESS_package.ESS_empirical.ESS_empirical">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ESS_package.ESS_empirical.</span></span><span class="sig-name descname"><span class="pre">ESS_empirical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_S_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SoE_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SoE_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SoE_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q_n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS_empirical.ESS_empirical" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ESS_package.ESS.ESS" title="ESS_package.ESS.ESS"><code class="xref py py-class docutils literal notranslate"><span class="pre">ESS</span></code></a></p>
+<p>Subclass that models an semi-empirical ESS.</p>
+<p>Models a Thevenin Equivalent Circuit ESS.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS_empirical.ESS_empirical.compute_ECM">
+<span class="sig-name descname"><span class="pre">compute_ECM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Qr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS_empirical.ESS_empirical.compute_ECM" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS_empirical.ESS_empirical.get_req_quant">
+<span class="sig-name descname"><span class="pre">get_req_quant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p_GL_S</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS_empirical.ESS_empirical.get_req_quant" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates needed quantities for the model computation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_GL_S</strong> (<em>float</em>) – Power flow between Grid Load (GL) and Storage (S) in kW.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS_empirical.ESS_empirical.get_wear_cost">
+<span class="sig-name descname"><span class="pre">get_wear_cost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SoE_prev</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_S_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS_empirical.ESS_empirical.get_wear_cost" title="Link to this definition">¶</a></dt>
+<dd><p>Same as ESS.get_wear_cost.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS_empirical.ESS_empirical.update_SoE_ch">
+<span class="sig-name descname"><span class="pre">update_SoE_ch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p_GL_S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_GL</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS_empirical.ESS_empirical.update_SoE_ch" title="Link to this definition">¶</a></dt>
+<dd><p>Same as ESS.update_SoE_ch.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS_empirical.ESS_empirical.update_SoE_dch">
+<span class="sig-name descname"><span class="pre">update_SoE_dch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p_GL_S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS_empirical.ESS_empirical.update_SoE_dch" title="Link to this definition">¶</a></dt>
+<dd><p>Same as ESS.update_SoE_dch.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ESS_package.ESS_linear">
+<span id="ess-linear"></span><h2>ESS linear<a class="headerlink" href="#module-ESS_package.ESS_linear" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ESS_package.ESS_linear.ESS_linear">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ESS_package.ESS_linear.</span></span><span class="sig-name descname"><span class="pre">ESS_linear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_S_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SoC_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SoC_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SoC_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q_n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS_linear.ESS_linear" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ESS_package.ESS.ESS" title="ESS_package.ESS.ESS"><code class="xref py py-class docutils literal notranslate"><span class="pre">ESS</span></code></a></p>
+<p>Subclass that models a linear ESS.</p>
+<p>It is a formally a subclass, since it is equal to the superclass.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS_linear.ESS_linear.get_wear_cost">
+<span class="sig-name descname"><span class="pre">get_wear_cost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SoE_prev</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_S_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS_linear.ESS_linear.get_wear_cost" title="Link to this definition">¶</a></dt>
+<dd><p>Same as ESS.get_wear_cost.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS_linear.ESS_linear.update_SoE_ch">
+<span class="sig-name descname"><span class="pre">update_SoE_ch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p_GL_S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_GL</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS_linear.ESS_linear.update_SoE_ch" title="Link to this definition">¶</a></dt>
+<dd><p>Same as ESS.update_SoE_ch.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ESS_package.ESS_linear.ESS_linear.update_SoE_dch">
+<span class="sig-name descname"><span class="pre">update_SoE_dch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p_GL_S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ESS_package.ESS_linear.ESS_linear.update_SoE_dch" title="Link to this definition">¶</a></dt>
+<dd><p>Same as ESS.update_SoE_dch.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ESS doc</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ESS package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-ESS_package.ESS">ESS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ESS_package.ESS_empirical">ESS empirical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ESS_package.ESS_linear">ESS linear</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">ESS documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Sapienza University.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/ESS_package.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
